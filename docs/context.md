@@ -1,54 +1,53 @@
 # Introdução
+O mercado de transporte e logística é um dos pilares essenciais para o funcionamento da economia global. No Brasil, o setor de transporte de cargas movimenta mais de R$ 1 trilhão anualmente, representando cerca de 7% do PIB nacional. No entanto, muitas empresas enfrentam dificuldades para encontrar transportadoras confiáveis e acessíveis, especialmente em regiões metropolitanas ou em cidades onde não possuem uma rede de contatos estabelecida.
 
-Imagine que você deseja apresentar este projeto para investidores que deverão decidir se investem ou não no desenvolvimento da sua ferramenta.
+Além disso, motoristas autônomos e pequenas transportadoras enfrentam desafios para encontrar clientes de maneira consistente, o que compromete sua capacidade de geração de receita e eficiência operacional. A falta de uma plataforma centralizada que conecte empresas e motoristas de forma eficiente gera ineficiências logísticas, aumento de custos e atrasos nas entregas.
 
-A **Introdução** consiste das etapas: *Contextualização -- Definição do problema -- Definição dos Objetivos -- Justificativa*, e tem como função situar o seu trabalho dentro de um contexto de mercado e mostrar a importância da sua proposta para resolver a dor de um usuário.
-
-A Contextualização deve situar sem projeto em um determinado contexto de mercado, a fim de fornecer informações adicionais que possam ajudar a entender melhor o assunto que você irá abordar. Serve também para definir a relevância do seu assunto, uma vez que mostra o tamanho do mercado em que se está inserido. Ela pode envolver a análise de vários aspectos, como o ambiente histórico, cultural, político e social em que o problema a ser atacado surgiu.
-
-Escreva de 2 a 3 parágrafos para contetualizar o seu projeto.
+Este projeto surge como uma oportunidade de unir a demanda por transporte de cargas com a oferta de serviços de frete, criando um sistema eficiente que permite a negociação direta, a comparação de preços e a construção de um sistema de reputação baseado na qualidade do serviço prestado.
 
 ## Problema
 
-Nesse momento você deve apresentar o problema que a sua aplicação deve resolver. No entanto, **não** é a hora de comentar sobre a solução/aplicação.
+Empresas que dependem de serviços de transporte enfrentam dificuldades para encontrar motoristas ou transportadoras confiáveis, especialmente em novas localidades. A ausência de uma plataforma centralizada que permita a comparação de preços em tempo real e a comunicação direta com os motoristas resulta em:
 
-Descreva também o contexto em que essa aplicação será usada, se  houver: empresa, tecnologias, etc. Novamente, descreva apenas o que de fato existir, pois ainda não é a hora de apresentar requisitos detalhados ou projetos.
-
-Nesse momento, o grupo pode optar por fazer uso  de ferramentas como Design Thinking, que permite um olhar de ponta a ponta para o problema.
-
-> **Links Úteis**:
-> - [Objetivos, Problema de pesquisa e Justificativa](https://medium.com/@versioparole/objetivos-problema-de-pesquisa-e-justificativa-c98c8233b9c3)
-> - [Matriz Certezas, Suposições e Dúvidas](https://medium.com/educa%C3%A7%C3%A3o-fora-da-caixa/matriz-certezas-suposi%C3%A7%C3%B5es-e-d%C3%BAvidas-fa2263633655)
-> - [Brainstorming](https://www.euax.com.br/2018/09/brainstorming/)
+Dificuldade para encontrar transportadoras qualificadas.
+Falta de transparência nos preços e na qualidade dos serviços prestados.
+Perda de tempo com negociações demoradas e pouco eficazes.
+Falta de um sistema de avaliação que permita aos clientes identificar os melhores prestadores de serviço.
+Motoristas autônomos e pequenas transportadoras também encontram barreiras para captar novos clientes e aumentar a frequência de serviços prestados. Muitas vezes, esses profissionais dependem exclusivamente de indicações informais ou redes de contatos limitadas, o que restringe sua capacidade de crescimento e estabilidade financeira.
 
 ## Objetivos
 
-Aqui você deve descrever os objetivos do trabalho indicando que o objetivo geral é desenvolver um software para solucionar o problema apresentado acima. 
+Desenvolver uma plataforma de terceirização de fretes que conecte empresas e transportadoras de maneira rápida, eficiente e transparente, permitindo a comparação de preços em tempo real e a negociação direta entre clientes e motoristas.
 
-Apresente também alguns (pelo menos 2) objetivos específicos dependendo de onde você vai querer concentrar a sua prática investigativa, ou como você vai aprofundar no seu trabalho.
- 
-> **Links Úteis**:
-> - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
+Objetivos Específicos
+✅ Criar uma interface intuitiva e acessível para motoristas e clientes.
+✅ Implementar um sistema de reputação baseado em feedback e avaliação de serviços.
+✅ Permitir o cadastro de motoristas e veículos com validação de documentos.
+✅ Desenvolver um sistema de busca e filtragem de fretes disponíveis em tempo real.
+✅ Garantir segurança nas transações e nas negociações entre as partes envolvidas.
 
 ## Justificativa
 
-Descreva a importância ou a motivação para trabalhar com esta aplicação que você escolheu. Indique as razões pelas quais você escolheu seus objetivos específicos ou as razões para aprofundar em certos aspectos do software.
+O mercado de transporte de cargas é extremamente competitivo e fragmentado. Segundo dados da Confederação Nacional do Transporte (CNT), mais de 60% do transporte de cargas no Brasil é realizado por caminhoneiros autônomos ou pequenas transportadoras, o que demonstra o potencial de impacto de uma plataforma que conecte diretamente esses profissionais com empresas que necessitam de serviços de frete.
 
-Lembre-se de pesquisar e utilizar números que justifiquem por que é importante que tal problema seja resolvido ou que mostrem o impacto do problema na vida das pessoas.
+A criação de um sistema eficiente de terceirização de fretes trará benefícios como:
 
-O grupo de trabalho pode fazer uso de questionários, entrevistas e dados estatísticos, que podem ser apresentados, com o objetivo de esclarecer detalhes do problema que será abordado pelo grupo.
-
-> **Links Úteis**:
-> - [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
+Redução de custos operacionais – Empresas não precisarão manter uma frota própria, reduzindo gastos com manutenção e mão de obra.
+Geração de oportunidades de trabalho – Motoristas autônomos terão maior visibilidade e acesso a novos contratos.
+Melhora na qualidade do serviço – A possibilidade de avaliação e feedback constante aumentará o nível de profissionalismo e qualidade dos serviços prestados.
+Eficiência logística – A comparação em tempo real de preços e a possibilidade de negociar diretamente com motoristas permitirá que empresas otimizem seus processos de entrega.
+Este projeto visa não apenas facilitar a logística de transporte, mas também contribuir para a profissionalização e expansão do mercado de fretes no Brasil, aumentando a competitividade das empresas e a estabilidade financeira dos motoristas.
 
 ## Público-Alvo
+O público-alvo deste projeto pode ser dividido em dois principais grupos:
 
-Descreva quem serão as pessoas que usarão a sua aplicação indicando os diferentes perfis. O objetivo aqui não é definir quem serão os clientes ou quais serão os papéis dos usuários na aplicação. A ideia é, dentro do possível, conhecer um pouco mais sobre o perfil dos usuários: conhecimentos prévios, relação com a tecnologia, relações hierárquicas, etc.
+Empresas que necessitam de serviços de frete
 
-Adicione informações sobre o público-alvo por meio de uma descrição textual, diagramas de personas e mapa de stakeholders.
+Pequenas, médias e grandes empresas que operam nos setores de e-commerce, indústria e distribuição de produtos.
+Empresas que desejam reduzir custos logísticos e aumentar a eficiência nas entregas.
+Pessoas físicas que buscam serviços de frete para mudanças ou transporte de mercadorias.
+Transportadoras e motoristas autônomos
 
-> **Links Úteis**:
-> - [Público-alvo](https://blog.hotmart.com/pt-br/publico-alvo/)
-> - [Como definir o público alvo](https://exame.com/pme/5-dicas-essenciais-para-definir-o-publico-alvo-do-seu-negocio/)
-> - [Público-alvo: o que é, tipos, como definir seu público e exemplos](https://klickpages.com.br/blog/publico-alvo-o-que-e/)
-> - [Qual a diferença entre público-alvo e persona?](https://rockcontent.com/blog/diferenca-publico-alvo-e-persona/)
+Transportadoras de pequeno, médio e grande porte que desejam aumentar sua base de clientes.
+Motoristas autônomos que querem otimizar o uso de seus veículos e aumentar a frequência de serviços prestados.
+Profissionais de transporte que buscam maior estabilidade e segurança nas negociações.
