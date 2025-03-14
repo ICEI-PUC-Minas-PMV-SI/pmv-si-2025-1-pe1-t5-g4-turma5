@@ -6,21 +6,21 @@ Definição do problema e ideia de solução a partir da perspectiva do usuário
 ## Personas
 
 **Persona 1: Cliente (Usuário que precisa do frete).**
-**Nome:** Carlos Ferreira
-**Idade:** 35 anos
-**Profissão:** Pequeno empreendedor de e-commerce
-**Necessidades:** Transportar mercadorias de forma confiável e acessível.
-**Desafios:** Dificuldade em encontrar transportadoras confiáveis e comparar preços de fretes.
-**Objetivo:** Encontrar um serviço de transporte seguro, rápido e com bom custo-benefício.
+* **Nome:** Carlos Ferreira
+* **Idade:** 35 anos
+* **Profissão:** Pequeno empreendedor de e-commerce
+* **Necessidades:** Transportar mercadorias de forma confiável e acessível.
+* **Desafios:** Dificuldade em encontrar transportadoras confiáveis e comparar preços de fretes.
+* **Objetivo:** Encontrar um serviço de transporte seguro, rápido e com bom custo-benefício.
 
 
 **Persona 2: Motorista Autônomo**
-**Nome:** Rodrigo Lima
-**Idade:** 40 anos
-**Profissão:** Motorista de carga leve
-**Necessidades:** Captar mais clientes para serviços de frete.
-**Desafios:** Encontrar oportunidades de transporte de forma eficiente.
-**Objetivo:** Aumentar a quantidade de serviços prestados e consequentemente sua renda mensal.
+* **Nome:** Rodrigo Lima
+* **Idade:** 40 anos
+* **Profissão:** Motorista de carga leve
+* **Necessidades:** Captar mais clientes para serviços de frete.
+* **Desafios:** Encontrar oportunidades de transporte de forma eficiente.
+* **Objetivo:** Aumentar a quantidade de serviços prestados e consequentemente sua renda mensal.
 
 ## Histórias de Usuários
 
