@@ -12,7 +12,7 @@ A terceirização de fretes é uma solução estratégica para empresas que prec
 
 * Nicolas Eduardo Claudio
 * Matheus Antônio Gonçalves Sales
-* Nome completo do aluno 3
+* Santiago Pereira da Silva
 * Nome completo do aluno 4
 * Nome completo do aluno 5
 
