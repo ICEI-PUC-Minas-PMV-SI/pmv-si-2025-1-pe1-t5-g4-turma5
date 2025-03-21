@@ -47,10 +47,10 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RF-04| O sistema deve ter um sistema de avaliação e feedback para clientes e motoristas.  | MÉDIA |
 |RF-05| O sistema deve permitir login e gerenciamento de perfil para clientes e motoristas.  | ALTA |
 |RF-06| O sistema deve ter um sistema de notificação para alertar clientes e motoristas sobre atualizações em seus fretes.  | BAIXA |
-|RF-07| Em aberto.  | MÉDIA |
-|RF-08| Em aberto.  | MÉDIA |
-|RF-09| Em aberto.  | MÉDIA |
-|RF-10| Em aberto.  | MÉDIA |
+|RF-07| O sistema deve permitir que o cliente aceite ou não determinado motorista.  | ALTA |
+|RF-08| O sistema deve permitir a negociação de preço entre motorista e cliente.  | ALTA |
+|RF-09| O sistema deve permitir que os clientes favoritem motoristas.  | MÉDIA |
+|RF-10| O sistema deve permitir que os clientes avaliem motoristas e vice-versa.  | BAIXA |
 
 
 ### Requisitos não Funcionais
@@ -61,9 +61,9 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RNF-02| O tempo de resposta do sistema deve ser inferior a 3 segundos por ação.  | MÉDIA | 
 |RNF-03| O sistema deve garantir a segurança dos dados dos usuários com criptografia e autenticação segura.  | ALTA | 
 |RNF-04| A interface do usuário deve ser intuitiva e de fácil navegação.  | MÉDIA |
-|RNF-05| O sistema deve suportar um grande número de usuários simultaneamente sem perda de desempenho.  | ALTA |
-|RNF-06| Em aberto.  | MÉDIA |
-|RNF-07| Em aberto.  | MÉDIA |
+|RNF-05| O sistema deve suportar um grande número de usuários simultaneamente sem perda de desempenho.  | MÉDIO |
+|RNF-06| O sistema deve gravar dados de usuário no navegador através do uso de local.storage.  | ALTA |
+|RNF-07| O sistema deve ter um design agradável.  | BAIXA |
 |RNF-08| Em aberto.  | MÉDIA |
 |RNF-09| Em aberto.  | MÉDIA |
 |RNF-10| Em aberto.  | MÉDIA |
