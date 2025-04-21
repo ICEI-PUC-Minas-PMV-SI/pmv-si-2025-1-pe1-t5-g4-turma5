@@ -3,7 +3,8 @@
 ## User Flow
 O fluxograma apresentado na figura 1 mostra o fluxo de interação do usuário pelas telas do sistema. Cada uma das telas deste fluxo é detalhada na seção de Protótipo de baixa fidelidade que se segue. Para visualizar o protótipo interativo, acesse o ambiente [MarvelApp](https://marvelapp.com/whiteboard/cx7C8ckm1cUnLtUSFXgo) do projeto.
 
-![User Flow](img/userflow.jpg)  
+![User Flow](![image](https://github.com/user-attachments/assets/32c75b25-f085-44f0-bd42-b41464f90bee)
+)  
 Figura 1 - Fluxo de telas do usuário
 
 ## Protótipo de baixa fidelidade
@@ -13,7 +14,7 @@ As telas do sistema apresentam uma estrutura comum entre elas, que é apresentad
 <li>Conteúdo - apresenta o conteúdo da tela em questão;</li>
 </ul>
 
-![Estrutura Padrão](img/wireframe-example.png)  
+![Estrutura Padrão](![image](https://github.com/user-attachments/assets/8931263b-8ec7-474f-8a22-7a4d44ab86fa))  
 Figura 2 - Estrutura padrão do site
 
 ---
