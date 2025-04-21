@@ -13,7 +13,7 @@ As telas do sistema apresentam uma estrutura comum entre elas, que é apresentad
 <li>Conteúdo - apresenta o conteúdo da tela em questão;</li>
 </ul>
 
-![Estrutura Padrão](img/protoripobaixafidelidade.png)  
+![Estrutura Padrão](img/prototipobaixafidelidade.png)  
 Figura 2 - Estrutura padrão do site
 
 ---
