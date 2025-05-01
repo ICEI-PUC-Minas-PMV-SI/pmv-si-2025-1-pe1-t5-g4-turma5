@@ -1,0 +1,45 @@
+<!-- Define o tipo do documento como HTML5 -->
+<!DOCTYPE html>
+<!-- Define o idioma do documento como Português do Brasil -->
+<html lang="pt-BR">
+<head>
+    <!-- Define a codificação de caracteres como UTF-8 -->
+    <meta charset="UTF-8">
+    <!-- Configura a viewport para dispositivos móveis -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título da página que aparece na aba do navegador -->
+    <title>Leva Ae</title>
+    <!-- Vincula o arquivo de estilos CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Cabeçalho da página contendo logo e navegação -->
+    <header class="header">
+        <!-- Título principal/logo do site -->
+        <h1>Leva Ae</h1>
+        <!-- Barra de navegação principal -->
+        <nav class="header-nav">
+            <!-- Lista de links de navegação -->
+            <ul>
+                <!-- Link para seção de mudança -->
+                <li><a href="#">Mudar-se</a></li>
+                <!-- Link para seção de motorista -->
+                <li><a href="#">Dirigir</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Tela inicial com apresentação do serviço -->
+    <div id="initial-screen">
+        <!-- Título principal da tela inicial -->
+        <h2>Frete mudanças com um clique</h2>
+        <!-- Subtítulo explicativo do serviço -->
+        <p class="subtitle">Por que mudar tem que ser uma dor de cabeça? Comece sua nova fase com leveza.</p>
+        <!-- Botão de início que redireciona para a tela de login -->
+        <button class="start-button" onclick="navigateToLogin()">Começar</button>
+    </div>
+
+    <!-- Vincula o arquivo JavaScript com as funcionalidades -->
+    <script src="script.js"></script>
+</body>
+</html>
