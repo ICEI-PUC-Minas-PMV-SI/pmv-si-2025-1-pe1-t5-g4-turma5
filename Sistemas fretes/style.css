@@ -1,0 +1,164 @@
+/* Reset básico para eliminar margens e paddings padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo base do corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+}
+
+/* Estilos do Cabeçalho */
+.header {
+    background-color: #007BFF; /* Cor de fundo azul */
+    color: white; /* Cor do texto */
+    padding: 1rem; /* Espaçamento interno */
+    position: fixed; /* Fixa o cabeçalho no topo */
+    width: 100%; /* Ocupa toda a largura */
+    top: 0;
+    left: 0;
+    display: flex; /* Layout flexível */
+    justify-content: space-between; /* Distribui espaço entre elementos */
+    align-items: center; /* Alinha verticalmente ao centro */
+}
+
+/* Estilo da navegação no cabeçalho */
+.header-nav ul {
+    display: flex; /* Layout flexível para links */
+    list-style: none; /* Remove marcadores da lista */
+    gap: 2rem; /* Espaço entre links */
+}
+
+/* Estilo dos links de navegação */
+.header-nav a {
+    color: white; /* Cor do texto */
+    text-decoration: none; /* Remove sublinhado */
+    font-weight: bold; /* Texto em negrito */
+}
+
+/* Estilos das telas principais */
+#initial-screen,
+#login-screen,
+#registration-choice,
+#client-registration,
+#driver-registration {
+    padding: 2rem;
+    margin-top: 4rem; /* Espaço para o cabeçalho fixo */
+    display: flex;
+    flex-direction: column; /* Organiza elementos verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+    justify-content: center; /* Centraliza verticalmente */
+    min-height: calc(100vh - 4rem); /* Altura mínima considerando o cabeçalho */
+}
+
+/* Ajustes específicos da tela inicial */
+#initial-screen {
+    margin-top: 2rem;
+}
+
+/* Posicionamento do título principal */
+#initial-screen h2 {
+    margin-top: -7rem;
+    margin-bottom: 1rem;
+}
+
+/* Espaçamento do subtítulo */
+.subtitle {
+    margin-bottom: 2rem;
+}
+
+/* Estilo do container principal de conteúdo */
+.container {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px; /* Cantos arredondados */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Estilos dos formulários */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /* Espaço entre campos */
+    width: 100%;
+}
+
+/* Estilo dos campos de entrada */
+input {
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+/* Estilo base dos botões */
+button {
+    padding: 0.8rem;
+    border: none;
+    border-radius: 4px;
+    background-color: #007BFF;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Estilo específico do botão de início */
+.start-button {
+    background-color: orange;
+    margin-top: 1rem;
+    padding: 1rem 2rem;
+    border: none;
+}
+
+/* Estilo das opções de registro */
+.registration-options {
+    display: flex;
+    justify-content: flex-end;
+    gap: 2rem;
+    margin-top: 1.5rem;
+    margin-right: 0rem;
+}
+
+/* Estilos específicos da tela de escolha de registro */
+#registration-choice {
+    padding: 2rem;
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 4rem);
+    padding-top: 0;
+}
+
+/* Título da tela de escolha de registro */
+#registration-choice h2 {
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+/* Container da tela de escolha de registro */
+#registration-choice .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-right: 2rem;
+}
+
+/* Botões da tela de escolha de registro */
+#registration-choice button {
+    min-width: 120px;
+    padding: 1rem 2rem;
+    margin: 0 1rem;
+}
+
+/* Classe utilitária para esconder elementos */
+.hidden {
+    display: none;
+}
