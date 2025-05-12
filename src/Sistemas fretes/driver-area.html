@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área do Motorista - Leva Ae</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="driver-area.css">
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="driver-area">
+    <!-- Cabeçalho com logo e botão de logout -->
+    <header class="header">
+        <h1>Sistemas de fretes</h1>
+        <button onclick="logout()" class="logout-btn">
+            <i class="fas fa-sign-out-alt"></i> Sair
+        </button>
+    </header>
+
+    <main class="driver-container">
+        <!-- Informações do motorista -->
+        <div class="driver-info">
+            <h2>Área do Motorista</h2>
+            <div class="welcome-message">
+                <p id="driver-greeting"></p>
+                <p id="vehicle-info"></p>
+            </div>
+        </div>
+
+        <!-- Abas -->
+        <div class="tabs">
+            <button class="tab-btn active" onclick="switchTab('available')">Fretes disponíveis</button>
+            <button class="tab-btn" onclick="switchTab('accepted')">Fretes aceitos</button>
+        </div>
+
+        <!-- Conteúdo das abas -->
+        <div id="available-freights" class="tab-content active">
+            <div class="freights-list">
+                <!-- Lista de fretes disponíveis será preenchida via JavaScript -->
+            </div>
+        </div>
+
+        <div id="accepted-freights" class="tab-content">
+            <div class="freights-list">
+                <!-- Lista de fretes aceitos será preenchida via JavaScript -->
+            </div>
+        </div>
+    </main>
+
+    <script src="driver-area.js"></script>
+</body>
+</html>

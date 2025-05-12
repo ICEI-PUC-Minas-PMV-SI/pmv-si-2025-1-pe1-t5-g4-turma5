@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área do Cliente - Leva Ae</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./client-area.css">
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="client-area">
+    <!-- Cabeçalho com logo e botão de logout -->
+    <header class="header">
+        <h1>Leva Ae</h1>
+        <button onclick="logout()" class="logout-btn">
+            <i class="fas fa-sign-out-alt"></i> Sair
+        </button>
+    </header>
+
+    <div class="client-container">
+        <!-- Menu lateral -->
+        <nav class="sidebar">
+            <ul>
+                <li>
+                    <a href="#" class="active" onclick="showSection('request-freight')">
+                        <i class="fas fa-truck"></i> Solicitar Frete
+                    </a>
+                </li>
+                <li>
+                    <a href="#" onclick="showSection('my-freights')">
+                        <i class="fas fa-list"></i> Meus Fretes
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Conteúdo principal -->
+        <main class="main-content">
+            <!-- Seção de Solicitar Frete -->
+            <section id="request-freight" class="content-section">
+                <h2>Solicitar Frete</h2>
+                <form id="freight-form" onsubmit="submitFreight(event)">
+                    <div class="form-group">
+                        <label for="description">Descrição da carga:</label>
+                        <textarea id="description" required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="origin">Endereço de origem:</label>
+                        <input type="text" id="origin" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="destination">Endereço de destino:</label>
+                        <input type="text" id="destination" required>
+                    </div>
+
+                    <button type="submit" class="submit-btn">
+                        <i class="fas fa-paper-plane"></i> Solicitar Frete
+                    </button>
+                </form>
+            </section>
+
+            <!-- Seção de Meus Fretes -->
+            <section id="my-freights" class="content-section hidden">
+                <h2>Meus Fretes</h2>
+                <div id="freights-list">
+                    <!-- Lista de fretes será preenchida via JavaScript -->
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="./client-area.js"></script>
+</body>
+</html>
