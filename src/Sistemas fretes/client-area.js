@@ -11,15 +11,15 @@ function showSection(sectionId) {
     document.querySelectorAll('.content-section').forEach(section => {
         section.classList.add('hidden');
     });
-    
+
     // Remove classe active de todos os links do menu
     document.querySelectorAll('.sidebar a').forEach(link => {
         link.classList.remove('active');
     });
-    
+
     // Mostra a seção selecionada
     document.getElementById(sectionId).classList.remove('hidden');
-    
+
     // Adiciona classe active ao link clicado
     document.querySelector(`[onclick="showSection('${sectionId}')"]`).classList.add('active');
 }
@@ -27,41 +27,49 @@ function showSection(sectionId) {
 // Função para enviar solicitação de frete
 function submitFreight(event) {
     event.preventDefault();
-    
+
     // Pega os valores do formulário
-    const description = document.getElementById('description').value;
-    const origin = document.getElementById('origin').value;
-    const destination = document.getElementById('destination').value;
-    
+    const descricao = document.getElementById('descricao').value;
+    const origem = document.getElementById('origem').value;
+    const destino = document.getElementById('destino').value;
+    const cliente = document.getElementById('cliente').value;
+    const contato = document.getElementById('contato').value;
+    const data = document.getElementById('data').value;
+    const hora = document.getElementById('hora').value;
+
     // Cria objeto do frete
     const freight = {
         id: Date.now(),
-        description,
-        origin,
-        destination,
+        descricao,
+        origem,
+        destino,
+        cliente,
+        contato,
+        data,
+        hora,
         date: new Date().toISOString(),
         status: 'pending',
         userEmail
     };
-    
+
     // Pega fretes existentes do localStorage ou cria array vazio
     const freights = JSON.parse(localStorage.getItem('freights') || '[]');
-    
+
     // Adiciona novo frete
     freights.push(freight);
-    
+
     // Salva no localStorage
     localStorage.setItem('freights', JSON.stringify(freights));
-    
+
     // Limpa o formulário
     document.getElementById('freight-form').reset();
-    
+
     // Atualiza a lista de fretes
     loadFreights();
-    
+
     // Mostra mensagem de sucesso
-    alert('Frete solicitado com sucesso!');
-    
+    alert(`Frete solicitado com sucesso! ${freight}`);
+
     // Muda para a seção de Meus Fretes
     showSection('my-freights');
 }
@@ -70,38 +78,43 @@ function submitFreight(event) {
 function loadFreights() {
     const freights = JSON.parse(localStorage.getItem('freights') || '[]');
     const freightsList = document.getElementById('freights-list');
-    
+
     // Filtra apenas os fretes do usuário logado
     const userFreights = freights.filter(freight => freight.userEmail === userEmail);
-    
+
     // Limpa a lista atual
     freightsList.innerHTML = '';
-    
+
     if (userFreights.length === 0) {
         freightsList.innerHTML = '<p>Nenhum frete solicitado ainda.</p>';
         return;
     }
-    
+
     // Ordena fretes por data (mais recentes primeiro)
     userFreights.sort((a, b) => new Date(b.date) - new Date(a.date));
-    
+
     // Cria cards para cada frete
     userFreights.forEach(freight => {
-        const date = new Date(freight.date).toLocaleDateString('pt-BR');
+        const data_do_pedido = new Date(freight.date).toLocaleDateString('pt-BR');
+        const data = new Date(freight.data).toLocaleDateString('pt-BR');
         const statusClass = freight.status === 'pending' ? 'status-pending' : 'status-accepted';
         const statusText = freight.status === 'pending' ? 'Pendente' : 'Aceito';
-        
+
         const card = document.createElement('div');
         card.className = 'freight-card';
         card.innerHTML = `
             <h3>Frete #${freight.id}</h3>
-            <div class="freight-info"><strong>Descrição:</strong> ${freight.description}</div>
-            <div class="freight-info"><strong>Origem:</strong> ${freight.origin}</div>
-            <div class="freight-info"><strong>Destino:</strong> ${freight.destination}</div>
-            <div class="freight-info"><strong>Data:</strong> ${date}</div>
+            <div class="freight-info"><strong>Descrição:</strong> ${freight.descricao}</div>
+            <div class="freight-info"><strong>Origem:</strong> ${freight.origem}</div>
+            <div class="freight-info"><strong>Destino:</strong> ${freight.destino}</div>
+            <div class="freight-info"><strong>Cliente:</strong> ${freight.cliente}</div>
+            <div class="freight-info"><strong>Contato:</strong> ${freight.contato}</div>
+            <div class="freight-info"><strong>Data:</strong> ${data}</div>
+            <div class="freight-info"><strong>Hora:</strong> ${freight.hora}</div>
+            <div class="freight-info"><strong>Data do pedido:</strong> ${data_do_pedido}</div>
             <span class="freight-status ${statusClass}">${statusText}</span>
         `;
-        
+
         freightsList.appendChild(card);
     });
 }
@@ -115,4 +128,10 @@ function logout() {
 // Carrega os fretes ao iniciar a página
 document.addEventListener('DOMContentLoaded', () => {
     loadFreights();
+
+    //Limpar campos da solicitação de fretes (jQuery)
+    $('.limparBtn').on('click', function (e) {
+        e.preventDefault();
+        $('.limpar').val('');
+    });
 });
