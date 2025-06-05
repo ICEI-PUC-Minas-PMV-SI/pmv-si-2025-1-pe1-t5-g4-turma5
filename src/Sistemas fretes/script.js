@@ -100,12 +100,46 @@ function navigateToClientRegistration() {
                 <input type="password" name="password" placeholder="Senha" required>
                 <input type="email" name="email" placeholder="Email" required>
                 <input type="tel" name="phone" placeholder="Celular" required>
-                <input type="text" name="cep" placeholder="CEP" required>
+                <input type="text" name="cep" placeholder="CEP" required onblur="fetchAddressFromCEP(this.value, 'client-form')">
+                <input type="text" name="street" placeholder="Rua" required>
+                <input type="text" name="neighborhood" placeholder="Bairro" required>
+                <input type="text" name="city" placeholder="Cidade" required>
+                <input type="text" name="state" placeholder="Estado" required>
                 <button type="submit">Cadastrar</button>
             </form>
         </div>
     `;
     document.body.appendChild(clientRegistration);
+}
+
+// Função para buscar endereço pelo CEP usando a API ViaCEP
+async function fetchAddressFromCEP(cep, formId) {
+    if (cep && cep.replace(/\D/g, '').length === 8) { // Remove não dígitos e verifica se o CEP tem 8 dígitos
+        const cleanCep = cep.replace(/\D/g, '');
+        try {
+            const response = await fetch(`https://viacep.com.br/ws/${cleanCep}/json/`);
+            if (!response.ok) {
+                throw new Error('CEP não encontrado');
+            }
+            const data = await response.json();
+            if (data.erro) {
+                alert('CEP não encontrado. Verifique o CEP digitado.');
+                return;
+            }
+
+            // Preenche os campos do formulário especificado
+            const form = document.getElementById(formId);
+            if (form) {
+                form.querySelector('input[name="street"]').value = data.logradouro || '';
+                form.querySelector('input[name="neighborhood"]').value = data.bairro || '';
+                form.querySelector('input[name="city"]').value = data.localidade || '';
+                form.querySelector('input[name="state"]').value = data.uf || '';
+            }
+        } catch (error) {
+            console.error('Erro ao buscar CEP:', error);
+            alert('Erro ao buscar CEP. Tente novamente.');
+        }
+    }
 }
 
 // Função para navegar para o cadastro de motorista
@@ -132,6 +166,21 @@ function navigateToDriverRegistration() {
                 </div>
                 <div class="form-group">
                     <input type="tel" name="phone" placeholder="Celular" pattern="[0-9]{11}" title="Digite seu número com DDD (11 dígitos)" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="cep" placeholder="CEP" required onblur="fetchAddressFromCEP(this.value, 'driver-form')">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="street" placeholder="Rua" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="neighborhood" placeholder="Bairro" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="city" placeholder="Cidade" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="state" placeholder="Estado" required>
                 </div>
                 <div class="form-group">
                     <input type="text" name="vehicleModel" placeholder="Modelo do veículo" required>
@@ -192,7 +241,11 @@ function handleClientRegistration(event) {
         email: form.querySelector('input[name="email"]').value,
         password: form.querySelector('input[name="password"]').value,
         phone: form.querySelector('input[name="phone"]').value,
-        cep: form.querySelector('input[name="cep"]').value
+        cep: form.querySelector('input[name="cep"]').value,
+        street: form.querySelector('input[name="street"]').value,
+        neighborhood: form.querySelector('input[name="neighborhood"]').value,
+        city: form.querySelector('input[name="city"]').value,
+        state: form.querySelector('input[name="state"]').value
     };
     
     // Salva os dados do cliente no localStorage
@@ -220,6 +273,11 @@ function handleDriverRegistration(event) {
         const email = form.querySelector('input[name="email"]').value;
         const password = form.querySelector('input[name="password"]').value;
         const phone = form.querySelector('input[name="phone"]').value;
+        const cep = form.querySelector('input[name="cep"]').value;
+        const street = form.querySelector('input[name="street"]').value;
+        const neighborhood = form.querySelector('input[name="neighborhood"]').value;
+        const city = form.querySelector('input[name="city"]').value;
+        const state = form.querySelector('input[name="state"]').value;
         const vehicleModel = form.querySelector('input[name="vehicleModel"]').value;
         const licensePlate = form.querySelector('input[name="licensePlate"]').value;
         const vehicleYear = form.querySelector('input[name="vehicleYear"]').value;
@@ -237,6 +295,11 @@ function handleDriverRegistration(event) {
             email,
             password,
             phone,
+            cep,
+            street,
+            neighborhood,
+            city,
+            state,
             vehicleModel,
             licensePlate,
             vehicleYear,
