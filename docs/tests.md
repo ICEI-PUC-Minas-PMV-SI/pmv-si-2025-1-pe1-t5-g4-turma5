@@ -1,4 +1,4 @@
-# Testes
+# Plano de testes de Software
 
 Neste projeto serão realizados dois tipos de testes:
 
