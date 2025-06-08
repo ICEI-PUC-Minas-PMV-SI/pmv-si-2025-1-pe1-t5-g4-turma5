@@ -1,6 +1,6 @@
 # Plano de testes de Software
 
-Neste projeto serão realizados dois tipos de testes:
+Pré requisitos:Especificação do Proejeto,Projeto de interface
 
  - O **Teste de Software**, que utiliza uma abordadem de caixa preta, e tem por objetivo verificar a conformidade do software com os requisitos funcionais e não funcionais do sistema.
  - O **Teste de Usabilidade**, que busca avaliar a qualidade do uso do sistema por um usuário do público alvo. 
