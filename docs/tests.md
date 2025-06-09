@@ -42,6 +42,17 @@ Os testes funcionais a serem realizados na aplicação são descritos a seguir.
     <td>O pedido de transporte deve ser registrado e exibido na lista de pedidos disponíveis.</td>
     <td>Silvia</td>
   </tr>
+</table>
+
+<table>
+  <tr>
+    <th>Caso de teste</th>
+    <th>Requisitos associados</th>
+    <th>Objetivo do teste</th>
+    <th>Passos</th>
+    <th>Critérios de êxito</th>
+    <th>Responsável</th>
+  </tr>
   <tr>
     <td>CT-02: Verificar lista de fretes disponíveis para motoristas</td>
     <td>
@@ -60,6 +71,17 @@ Os testes funcionais a serem realizados na aplicação são descritos a seguir.
     </td>
     <td>A lista de fretes deve ser exibida com informações detalhadas.</td>
     <td>Rodrigo</td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <th>Caso de teste</th>
+    <th>Requisitos associados</th>
+    <th>Objetivo do teste</th>
+    <th>Passos</th>
+    <th>Critérios de êxito</th>
+    <th>Responsável</th>
   </tr>
   <tr>
     <td>CT-03: Verificar sistema de avaliação</td>
@@ -81,6 +103,17 @@ Os testes funcionais a serem realizados na aplicação são descritos a seguir.
     <td>O feedback deve ser registrado e exibido no histórico de avaliações.</td>
     <td>Carlos</td>
   </tr>
+</table>
+
+<table>
+  <tr>
+    <th>Caso de teste</th>
+    <th>Requisitos associados</th>
+    <th>Objetivo do teste</th>
+    <th>Passos</th>
+    <th>Critérios de êxito</th>
+    <th>Responsável</th>
+  </tr>
   <tr>
     <td>CT-04: Verificar sistema de login</td>
     <td>
@@ -99,6 +132,17 @@ Os testes funcionais a serem realizados na aplicação são descritos a seguir.
     </td>
     <td>O usuário deve ser autenticado e redirecionado para a sua página de perfil.</td>
     <td>Maria</td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <th>Caso de teste</th>
+    <th>Requisitos associados</th>
+    <th>Objetivo do teste</th>
+    <th>Passos</th>
+    <th>Critérios de êxito</th>
+    <th>Responsável</th>
   </tr>
   <tr>
     <td>CT-05: Verificar responsividade do sistema</td>
