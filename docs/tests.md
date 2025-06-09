@@ -12,6 +12,7 @@ Os requisitos para realização dos testes de software são:
 
 Os testes funcionais a serem realizados na aplicação são descritos a seguir.
 
+<!-- CT-01 -->
 <table>
   <tr>
     <th>Caso de teste</th>
@@ -44,6 +45,7 @@ Os testes funcionais a serem realizados na aplicação são descritos a seguir.
   </tr>
 </table>
 
+<!-- CT-02 -->
 <table>
   <tr>
     <th>Caso de teste</th>
@@ -74,6 +76,7 @@ Os testes funcionais a serem realizados na aplicação são descritos a seguir.
   </tr>
 </table>
 
+<!-- CT-03 -->
 <table>
   <tr>
     <th>Caso de teste</th>
@@ -105,6 +108,7 @@ Os testes funcionais a serem realizados na aplicação são descritos a seguir.
   </tr>
 </table>
 
+<!-- CT-04 -->
 <table>
   <tr>
     <th>Caso de teste</th>
@@ -135,6 +139,7 @@ Os testes funcionais a serem realizados na aplicação são descritos a seguir.
   </tr>
 </table>
 
+<!-- CT-05 -->
 <table>
   <tr>
     <th>Caso de teste</th>
@@ -145,7 +150,39 @@ Os testes funcionais a serem realizados na aplicação são descritos a seguir.
     <th>Responsável</th>
   </tr>
   <tr>
-    <td>CT-05: Verificar responsividade do sistema</td>
+    <td>CT-05: Verificar sistema de notificação</td>
+    <td>
+      <ul>
+        <li>RF-06: O sistema deve ter um sistema de notificação para alertar clientes e motoristas sobre atualizações em seus fretes.</li>
+      </ul>
+    </td>
+    <td>Garantir que notificações são enviadas corretamente.</td>
+    <td>
+      <ol>
+        <li>Acessar o navegador.</li>
+        <li>Informar o endereço do site.</li>
+        <li>Realizar login como cliente ou motorista.</li>
+        <li>Simular uma atualização em um frete.</li>
+        <li>Verificar a notificação recebida.</li>
+      </ol>
+    </td>
+    <td>A notificação deve ser exibida para o usuário alertando sobre a atualização.</td>
+    <td>Rodrigo</td>
+  </tr>
+</table>
+
+<!-- CT-06 -->
+<table>
+  <tr>
+    <th>Caso de teste</th>
+    <th>Requisitos associados</th>
+    <th>Objetivo do teste</th>
+    <th>Passos</th>
+    <th>Critérios de êxito</th>
+    <th>Responsável</th>
+  </tr>
+  <tr>
+    <td>CT-06: Verificar responsividade do sistema</td>
     <td>
       <ul>
         <li>RNF-01: O sistema deve ser responsivo para uso em dispositivos móveis e desktop.</li>
@@ -161,5 +198,35 @@ Os testes funcionais a serem realizados na aplicação são descritos a seguir.
     </td>
     <td>O sistema deve ajustar a interface conforme o dispositivo utilizado.</td>
     <td>Beatriz</td>
+  </tr>
+</table>
+
+<!-- CT-07 -->
+<table>
+  <tr>
+    <th>Caso de teste</th>
+    <th>Requisitos associados</th>
+    <th>Objetivo do teste</th>
+    <th>Passos</th>
+    <th>Critérios de êxito</th>
+    <th>Responsável</th>
+  </tr>
+  <tr>
+    <td>CT-07: Verificar tempo de resposta</td>
+    <td>
+      <ul>
+        <li>RNF-02: O tempo de resposta do sistema deve ser inferior a 3 segundos por ação.</li>
+      </ul>
+    </td>
+    <td>Garantir que o sistema responde dentro do tempo estipulado.</td>
+    <td>
+      <ol>
+        <li>Acessar o navegador.</li>
+        <li>Informar o endereço do site.</li>
+        <li>Realizar interações em diferentes páginas e medir o tempo de resposta.</li>
+      </ol>
+    </td>
+    <td>Todas as ações devem ter um tempo de resposta inferior a 3 segundos.</td>
+    <td>Pedro</td>
   </tr>
 </table>
