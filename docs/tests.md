@@ -1,7 +1,7 @@
 <span style="color:red">
   Pré-requisitos: 
-  <a href="https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2025-1-pe1-t5-g4-turma5/blob/main/documentos/02-Especificação%20do%20Projeto.md">Especificação do Projeto</a>, 
-  <a href="[INSIRA_LINK_PROJETO_DE_INTERFACE]">Projeto de Interface</a>
+  <a href="especification.md">Especificação do Projeto</a>, 
+  <a href="interface.md">Projeto de Interface</a>
 </span>
 
 Os requisitos para realização dos testes de software são:
