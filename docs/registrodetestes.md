@@ -6,7 +6,7 @@
 **Responsavel** Nicolas
 
 **Cadastro dos pedidos**
-**Evidência em vídeo:** 🎥 [Inserir link para o vídeo aqui](./vid/placeholder_CT-01.mp4)
+**Evidência em vídeo:** 🎥 [cadastro de pedidos](./vid/cadastro%20de%20pedidos.mp4)
 
 ---
 
@@ -14,7 +14,7 @@
 **Responsável:** Santiago
 
 **Listas de fretes**
-**Evidência em vídeo:** 🎥 [Inserir link para o vídeo aqui](./vid/placeholder_CT-02.mp4)
+**Evidência em vídeo:** 🎥 [Listas de fretes](./vid/fretes%20disponiveis%20para%20motorista.mp4)
 
 ---
 
@@ -22,7 +22,7 @@
 **Responsável:** Nicolas
 
 **Funcionalidade de avaliação**
-**Evidência em vídeo:** 🎥 [Inserir link para o vídeo aqui](./vid/placeholder_CT-03.mp4)
+**Evidência em vídeo:** 🎥 [Funcionalidade de avaliação](./vid/sistema%20de%20avaliação.mp4)
 
 ---
 
@@ -43,7 +43,7 @@ O motorista insere as credenciais e clica em **login**.
 **Responsável:** Nicolas
 
 **Notificação de frete aceito**
-**Evidência em vídeo:** 🎥 [Inserir link para o vídeo aqui](./vid/placeholder_CT-05.mp4)
+**Evidência em vídeo:** 🎥 [Notificação para cliente](./vid/funcionalidade%20de%20notificação.mp4)
 
 ---
 
@@ -51,7 +51,7 @@ O motorista insere as credenciais e clica em **login**.
 **Responsável:** Nicolas
 
 **Responsividade da aplicação**
-**Evidência em vídeo:** 🎥 [Inserir link para o vídeo aqui](./vid/placeholder_CT-06.mp4)
+**Evidência em vídeo:** 🎥 [responsividade](./vid/responsividade.mp4)
 
 ---
 
@@ -59,4 +59,4 @@ O motorista insere as credenciais e clica em **login**.
 **Responsável:** Nicolas
 
 **Tempo de resposta**
-**Evidência em vídeo:** 🎥 [Inserir link para o vídeo aqui](./vid/placeholder_CT-07.mp4)
+**Evidência em vídeo:** 🎥 [tempo de resposta](./vid/tempo%20de%20resposta.mp4)
