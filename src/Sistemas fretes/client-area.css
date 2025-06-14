@@ -52,7 +52,7 @@
     padding: 30px;
 }
 
-/* .content-section {
+.content-section {
     background-color: white;
     border-radius: 10px;
     padding: 25px;
@@ -64,7 +64,7 @@
     margin-bottom: 25px;
     border-bottom: 2px solid #f0f0f0;
     padding-bottom: 10px;
-} */
+}
 
 /* Estilos do formulário */
 .form-group {
@@ -178,4 +178,102 @@
 
 .hidden {
     display: none;
+}
+
+/* Avaliação com estrelas */
+.rating {
+    margin-top: 10px;
+}
+
+.rating i {
+    color: #ddd;
+    cursor: pointer;
+    font-size: 16px;
+    margin-right: 2px;
+}
+
+.rating i.rated {
+    color: #ffd700;
+}
+
+.rating i:hover {
+    color: #ffc107;
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+    .client-container {
+        flex-direction: column; /* Layout em coluna para telas menores */
+    }
+
+    .sidebar {
+        width: 100%; /* Barra lateral ocupa toda a largura */
+        box-shadow: none;
+        border-bottom: 1px solid #eee;
+        padding: 10px 0;
+    }
+
+    .sidebar ul {
+        display: flex; /* Links lado a lado */
+        justify-content: space-around; /* Distribui espaço entre links */
+    }
+
+    .sidebar a {
+        padding: 10px 15px;
+        justify-content: center;
+    }
+
+    .sidebar i {
+        margin-right: 5px;
+    }
+
+    .main-content {
+        padding: 15px;
+    }
+
+    .content-section {
+        padding: 15px;
+    }
+
+    #freights-list {
+        grid-template-columns: 1fr; /* Uma coluna para fretes */
+    }
+}
+
+@media (max-width: 480px) {
+    .sidebar a {
+        font-size: 0.9rem; /* Reduz tamanho da fonte dos links da barra lateral */
+        padding: 12px 10px; /* Aumentar área de toque */
+        min-height: 44px; /* Melhorar área de toque */
+    }
+
+    .content-section h2 {
+        font-size: 1.2rem; /* Reduz tamanho da fonte dos títulos da seção */
+    }
+
+    .form-group input,
+    .form-group textarea {
+        padding: 12px;
+        font-size: 0.9rem;
+        min-height: 44px; /* Melhorar área de toque */
+    }
+
+    .submit-btn {
+        padding: 12px 20px;
+        font-size: 0.9rem;
+        min-height: 44px; /* Melhorar área de toque */
+    }
+
+    .freight-card h3 {
+        font-size: 1rem;
+    }
+
+    .freight-info {
+        font-size: 0.9rem;
+    }
+
+    .freight-status {
+        padding: 5px 10px;
+        font-size: 0.8rem;
+    }
 }

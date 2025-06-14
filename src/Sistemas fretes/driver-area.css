@@ -144,3 +144,66 @@
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 4px;
 }
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+    .driver-container {
+        padding: 1rem;
+    }
+
+    .driver-info {
+        padding: 1.5rem;
+    }
+
+    .tabs {
+        flex-direction: column; /* Abas em coluna */
+        gap: 0.5rem;
+    }
+
+    .tab-btn {
+        width: 100%;
+        padding: 0.8rem 1rem;
+    }
+
+    .freights-list {
+        grid-template-columns: 1fr; /* Uma coluna para fretes */
+    }
+}
+
+@media (max-width: 480px) {
+    .driver-info h2 {
+        font-size: 1.2rem;
+    }
+
+    .welcome-message,
+    .vehicle-info {
+        font-size: 1rem;
+    }
+
+    .tab-btn {
+        font-size: 0.9rem;
+        min-height: 44px; /* Melhorar área de toque */
+    }
+
+    .freight-card {
+        padding: 1rem;
+    }
+
+    .freight-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .freight-info {
+        font-size: 0.9rem;
+    }
+
+    .accept-btn {
+        padding: 0.7rem 1rem;
+        font-size: 0.9rem;
+        min-height: 44px; /* Melhorar área de toque */
+    }
+
+    .freight-dates {
+        font-size: 0.8rem;
+    }
+}

@@ -39,7 +39,7 @@ function submitFreight(event) {
 
     // Cria objeto do frete
     const freight = {
-        id: Date.now(),
+        id: Date.now(), // Usar Date.now() para um ID único simples
         descricao,
         origem,
         destino,
@@ -47,9 +47,9 @@ function submitFreight(event) {
         contato,
         data,
         hora,
-        date: new Date().toISOString(),
-        status: 'pending',
-        userEmail
+        date: new Date().toISOString(), // Data da solicitação
+        status: 'pending', // Status inicial
+        userEmail // Email do usuário logado
     };
 
     // Pega fretes existentes do localStorage ou cria array vazio
@@ -68,7 +68,7 @@ function submitFreight(event) {
     loadFreights();
 
     // Mostra mensagem de sucesso
-    alert(`Frete solicitado com sucesso! ${freight}`);
+    alert(`Frete #${freight.id} solicitado com sucesso!`);
 
     // Muda para a seção de Meus Fretes
     showSection('my-freights');
@@ -115,6 +115,17 @@ function loadFreights() {
             <span class="freight-status ${statusClass}">${statusText}</span>
         `;
 
+        let ratingHtml = '';
+        if (freight.status === 'accepted') {
+            // Monta avaliação com estrelas
+            ratingHtml = '<div class="rating">';
+            for (let i = 1; i <= 5; i++) {
+                const filled = freight.rating >= i ? ' rated' : '';
+                ratingHtml += `<i class="fas fa-star${filled}" onclick="rateFreight(${freight.id}, ${i})"></i>`;
+            }
+            ratingHtml += '</div>';
+        }
+        card.innerHTML += ratingHtml;
         freightsList.appendChild(card);
     });
 }
@@ -125,9 +136,39 @@ function logout() {
     window.location.href = 'index.html';
 }
 
+// Função para avaliar frete
+function rateFreight(id, rating) {
+    const freights = JSON.parse(localStorage.getItem('freights') || '[]');
+    const idx = freights.findIndex(f => f.id === id);
+    if (idx !== -1) {
+        freights[idx].rating = rating;
+        localStorage.setItem('freights', JSON.stringify(freights));
+        alert('Obrigado pela avaliação!');
+        loadFreights();
+    }
+}
+
+// Função para verificar notificações de frete aceito
+function checkFreightNotifications() {
+    const freights = JSON.parse(localStorage.getItem('freights') || '[]');
+    const userFreights = freights.filter(freight => freight.userEmail === userEmail && freight.notification_pending_client);
+
+    userFreights.forEach(freight => {
+        alert(`Seu frete #${freight.id} foi aceito por um motorista!`);
+        // Marcar notificação como visualizada para não mostrar novamente
+        const freightIndex = freights.findIndex(f => f.id === freight.id);
+        if (freightIndex !== -1) {
+            freights[freightIndex].notification_pending_client = false;
+        }
+    });
+    localStorage.setItem('freights', JSON.stringify(freights));
+    loadFreights(); // Recarregar fretes para refletir o status da notificação (opcional)
+}
+
 // Carrega os fretes ao iniciar a página
 document.addEventListener('DOMContentLoaded', () => {
     loadFreights();
+    checkFreightNotifications(); // Verificar notificações de frete
 
     //Limpar campos da solicitação de fretes (jQuery)
     $('.limparBtn').on('click', function (e) {

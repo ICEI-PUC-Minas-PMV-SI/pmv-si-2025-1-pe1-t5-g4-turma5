@@ -48,7 +48,7 @@ function loadFreights(type) {
     if (type === 'available') {
         filteredFreights = freights.filter(freight => !freight.driverId && freight.status === 'pending');
     } else {
-        filteredFreights = freights.filter(freight => freight.driverId === driverData.email);
+        filteredFreights = freights.filter(freight => freight.driverId === userData.email);
     }
     
     if (filteredFreights.length === 0) {
@@ -68,12 +68,21 @@ function loadFreights(type) {
         }
         
         card.innerHTML = `
-            <h3>${freight.description}</h3>
+            <h3>Frete #${freight.id}</h3>
             <div class="freight-info">
-                <i class="fas fa-map-marker-alt"></i> <strong>Origem:</strong> ${freight.origin}
+                <i class="fas fa-box"></i> <strong>Descrição:</strong> ${freight.descricao}
             </div>
             <div class="freight-info">
-                <i class="fas fa-map-marker"></i> <strong>Destino:</strong> ${freight.destination}
+                <i class="fas fa-map-marker-alt"></i> <strong>Origem:</strong> ${freight.origem}
+            </div>
+            <div class="freight-info">
+                <i class="fas fa-map-marker"></i> <strong>Destino:</strong> ${freight.destino}
+            </div>
+            <div class="freight-info">
+                <i class="fas fa-user"></i> <strong>Cliente:</strong> ${freight.cliente}
+            </div>
+            <div class="freight-info">
+                <i class="fas fa-phone"></i> <strong>Contato:</strong> ${freight.contato}
             </div>
             <div class="freight-dates">
                 <div>Solicitado em: ${date}</div>
@@ -100,8 +109,9 @@ function acceptFreight(freightId) {
     
     if (freightIndex !== -1) {
         freights[freightIndex].status = 'accepted';
-        freights[freightIndex].driverId = driverData.email;
+        freights[freightIndex].driverId = userData.email;
         freights[freightIndex].acceptedDate = new Date().toISOString();
+        freights[freightIndex].notification_pending_client = true; // Marcar para notificação do cliente
         
         localStorage.setItem('freights', JSON.stringify(freights));
         
@@ -117,7 +127,7 @@ function logout() {
     window.location.href = 'index.html';
 }
 
-// Carrega os fretes disponíveis ao iniciar a página
+// Carrega os fretes ao iniciar a página
 document.addEventListener('DOMContentLoaded', () => {
     loadFreights('available');
 });

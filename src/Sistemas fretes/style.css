@@ -235,3 +235,68 @@ input[type="file"] {
 #driver-registration .container {
     max-width: 500px;
 }
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+    .header-nav ul {
+        flex-direction: column; /* Links em coluna em telas menores */
+        gap: 1rem;
+    }
+
+    .header {
+        flex-direction: column; /* Cabeçalho em coluna */
+        align-items: flex-start;
+    }
+
+    #initial-screen,
+    #login-screen,
+    #registration-choice,
+    #client-registration,
+    #driver-registration {
+        padding: 1rem;
+        margin-top: 120px; /* Ajuste para cabeçalho maior */
+        min-height: calc(100vh - 120px);
+    }
+
+    .container {
+        padding: 1.5rem;
+    }
+
+    .registration-options {
+        flex-direction: column; /* Opções de registro em coluna */
+        gap: 1rem;
+        align-items: center;
+    }
+
+    #registration-choice button {
+        width: 100%;
+        margin: 0.5rem 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .header h1 {
+        font-size: 1.5rem; /* Reduz tamanho da fonte do título */
+    }
+
+    button,
+    .start-button {
+        font-size: 0.9rem; /* Reduz tamanho da fonte dos botões */
+        padding: 0.7rem;
+        min-height: 44px; /* Melhorar área de toque */
+    }
+
+    input {
+        font-size: 0.9rem; /* Reduz tamanho da fonte dos inputs */
+        padding: 0.7rem; /* Ajustar padding para mobile */
+        min-height: 44px; /* Melhorar área de toque */
+    }
+
+    .container {
+        padding: 1rem;
+    }
+
+    #registration-choice button {
+        padding: 0.8rem;
+    }
+}
