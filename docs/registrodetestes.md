@@ -15,7 +15,7 @@
 
 **Listas de fretes**
 <video controls width="600">
-  <source src="https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2025-1-pe1-t5-g4-turma5/raw/main/docs/vid/fretes%20disponiveis%20para%20motorista.mp4" type="video/mp4">
+  <source src="https://github.com/user-attachments/assets/7b0896ff-48ec-4e8b-994f-df9c7f1abe62" type="video/mp4">
   Seu navegador não suporta o elemento de vídeo.
 </video>
 
