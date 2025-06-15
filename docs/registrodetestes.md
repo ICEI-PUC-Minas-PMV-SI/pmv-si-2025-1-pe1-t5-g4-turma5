@@ -6,7 +6,7 @@
 **Responsavel** Nicolas
 
 **Cadastro dos pedidos**
-**Evidência em vídeo:** 🎥 [cadastro de pedidos](./vid/cadastro%20de%20pedidos.mp4)
+**Evidência em vídeo:** 🎥 [Ver vídeo demonstrativo](https://github.com/user-attachments/assets/5ba0a86b-9229-4427-836d-e0b71fb3159a)
 
 ---
 
