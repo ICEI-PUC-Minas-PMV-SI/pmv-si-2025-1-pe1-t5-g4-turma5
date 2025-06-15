@@ -6,7 +6,7 @@
 **Responsavel** Nicolas
 
 **Cadastro dos pedidos**
-**Evidência em vídeo:** 🎥[Assista ao vídeo de cadastro de pedidos](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2025-1-pe1-t5-g4-turma5/blob/main/docs/vid/cadastro%20de%20pedidos.mp4)
+**Evidência em vídeo:** 🎥[Assista ao vídeo de cadastro de pedidos](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2025-1-pe1-t5-g4-turma5/raw/main/docs/vid/cadastro%20de%20pedidos.mp4)
 
 ---
 
