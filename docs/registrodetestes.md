@@ -6,7 +6,10 @@
 **Responsavel** Nicolas
 
 **Cadastro dos pedidos**
-**Evidência em vídeo:** 🎥 [cadastro de pedidos](./vid/cadastro%20de%20pedidos.mp4)
+<video controls width="600">
+  <source src="https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2025-1-pe1-t5-g4-turma5/raw/main/docs/vid/cadastro%20de%20pedidos.mp4" type="video/mp4">
+  Seu navegador não suporta o elemento de vídeo.
+</video>
 
 ---
 
@@ -14,7 +17,10 @@
 **Responsável:** Santiago
 
 **Listas de fretes**
-**Evidência em vídeo:** 🎥 [Listas de fretes](./vid/fretes%20disponiveis%20para%20motorista.mp4)
+<video controls width="600">
+  <source src="https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2025-1-pe1-t5-g4-turma5/raw/main/docs/vid/fretes%20disponiveis%20para%20motorista.mp4" type="video/mp4">
+  Seu navegador não suporta o elemento de vídeo.
+</video>
 
 ---
 
@@ -22,7 +28,10 @@
 **Responsável:** Nicolas
 
 **Funcionalidade de avaliação**
-**Evidência em vídeo:** 🎥 [Funcionalidade de avaliação](./vid/sistema%20de%20avaliação.mp4)
+<video controls width="600">
+  <source src="https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2025-1-pe1-t5-g4-turma5/raw/main/docs/vid/sistema%20de%20avalia%C3%A7%C3%A3o.mp4" type="video/mp4">
+  Seu navegador não suporta o elemento de vídeo.
+</video>
 
 ---
 
@@ -31,11 +40,17 @@
 
 **Cliente:**  
 O cliente insere as credenciais e clica em **login**.  
-🎥 [Ver vídeo do cliente](./vid/loginclientefun.mp4)
+<video controls width="600">
+  <source src="https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2025-1-pe1-t5-g4-turma5/raw/main/docs/vid/loginclientefun.mp4" type="video/mp4">
+  Seu navegador não suporta o elemento de vídeo.
+</video>
 
 **Motorista:**  
 O motorista insere as credenciais e clica em **login**.  
-🎥 [Ver vídeo do motorista](./vid/loginmotoristafun.mp4)
+<video controls width="600">
+  <source src="https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2025-1-pe1-t5-g4-turma5/raw/main/docs/vid/loginmotoristafun.mp4" type="video/mp4">
+  Seu navegador não suporta o elemento de vídeo.
+</video>
 
 ---
 
@@ -43,7 +58,10 @@ O motorista insere as credenciais e clica em **login**.
 **Responsável:** Nicolas
 
 **Notificação de frete aceito**
-**Evidência em vídeo:** 🎥 [Notificação para cliente](./vid/funcionalidade%20de%20notificação.mp4)
+<video controls width="600">
+  <source src="https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2025-1-pe1-t5-g4-turma5/raw/main/docs/vid/funcionalidade%20de%20notifica%C3%A7%C3%A3o.mp4" type="video/mp4">
+  Seu navegador não suporta o elemento de vídeo.
+</video>
 
 ---
 
@@ -51,7 +69,10 @@ O motorista insere as credenciais e clica em **login**.
 **Responsável:** Nicolas
 
 **Responsividade da aplicação**
-**Evidência em vídeo:** 🎥 [responsividade](./vid/responsividade.mp4)
+<video controls width="600">
+  <source src="https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2025-1-pe1-t5-g4-turma5/raw/main/docs/vid/responsividade.mp4" type="video/mp4">
+  Seu navegador não suporta o elemento de vídeo.
+</video>
 
 ---
 
@@ -59,4 +80,7 @@ O motorista insere as credenciais e clica em **login**.
 **Responsável:** Nicolas
 
 **Tempo de resposta**
-**Evidência em vídeo:** 🎥 [tempo de resposta](./vid/tempo%20de%20resposta.mp4)
+<video controls width="600">
+  <source src="https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2025-1-pe1-t5-g4-turma5/raw/main/docs/vid/tempo%20de%20resposta.mp4" type="video/mp4">
+  Seu navegador não suporta o elemento de vídeo.
+</video>
