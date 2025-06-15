@@ -6,10 +6,7 @@
 **Responsavel** Nicolas
 
 **Cadastro dos pedidos**
-<video controls width="600">
-  <source src="https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2025-1-pe1-t5-g4-turma5/raw/main/docs/vid/cadastro%20de%20pedidos.mp4" type="video/mp4">
-  Seu navegador não suporta o elemento de vídeo.
-</video>
+**Evidência em vídeo:** 🎥 [cadastro de pedidos](./vid/cadastro%20de%20pedidos.mp4)
 
 ---
 
