@@ -22,6 +22,28 @@ function showSection(sectionId) {
 
     // Adiciona classe active ao link clicado
     document.querySelector(`[onclick="showSection('${sectionId}')"]`).classList.add('active');
+
+    if (sectionId === 'my-profile') {
+        loadProfileInfo();
+    }
+}
+
+// Função para carregar informações do perfil do cliente
+function loadProfileInfo() {
+    const users = JSON.parse(localStorage.getItem('users')) || [];
+    const currentUser = users.find(user => user.email === userEmail);
+    const profileInfoContainer = document.getElementById('profile-info');
+
+    if (currentUser) {
+        profileInfoContainer.innerHTML = `
+            <p><strong>Nome:</strong> ${currentUser.name}</p>
+            <p><strong>Email:</strong> ${currentUser.email}</p>
+            <p><strong>Telefone:</strong> ${currentUser.phone}</p>
+            <p><strong>Endereço:</strong> ${currentUser.address}</p>
+        `;
+    } else {
+        profileInfoContainer.innerHTML = '<p>Não foi possível carregar as informações do perfil.</p>';
+    }
 }
 
 // Função para enviar solicitação de frete

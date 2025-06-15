@@ -42,19 +42,22 @@ function handleLogin(event) {
     // Verifica se é um motorista
     const driverData = JSON.parse(localStorage.getItem('driverData') || 'null');
     console.log('Dados do motorista em localStorage:', driverData);
-      // Verifica se é um cliente
-    const clientData = JSON.parse(localStorage.getItem('clientData') || 'null');
-    console.log('Dados do cliente em localStorage:', clientData);
-      if (driverData && driverData.email === email && driverData.password === password) {
+    
+    // Verifica se é um cliente
+    const users = JSON.parse(localStorage.getItem('users') || '[]');
+    const clientUser = users.find(user => user.email === email && user.password === password);
+    console.log('Usuários clientes em localStorage:', users);
+
+    if (driverData && driverData.email === email && driverData.password === password) {
         // É um motorista - copia os dados de registro para a sessão atual
         console.log('Login de motorista bem-sucedido');
         const sessionData = {...driverData}; // Cria uma cópia dos dados de registro
         localStorage.setItem('currentDriver', JSON.stringify(sessionData));
         window.location.href = 'driver-area.html';
-    } else if (clientData && clientData.email === email && clientData.password === password) {
+    } else if (clientUser) {
         // É um cliente
         console.log('Login de cliente bem-sucedido');
-        localStorage.setItem('userEmail', email);
+        localStorage.setItem('userEmail', email); // userEmail é usado em client-area.js
         window.location.href = 'client-area.html';
     } else {
         console.log('Login falhou - credenciais não correspondem');
@@ -235,22 +238,33 @@ function handleClientRegistration(event) {
     event.preventDefault();
     const form = event.target;
     
-    // Pega os valores diretamente dos campos do formulário
+    const name = form.querySelector('input[name="name"]').value;
+    const email = form.querySelector('input[name="email"]').value;
+    const password = form.querySelector('input[name="password"]').value;
+    const phone = form.querySelector('input[name="phone"]').value;
+    const cep = form.querySelector('input[name="cep"]').value;
+    const street = form.querySelector('input[name="street"]').value;
+    const neighborhood = form.querySelector('input[name="neighborhood"]').value;
+    const city = form.querySelector('input[name="city"]').value;
+    const state = form.querySelector('input[name="state"]').value;
+
+    // Concatena o endereço
+    const address = `${street}, ${neighborhood}, ${city} - ${state}, CEP: ${cep}`;
+
     const clientData = {
-        name: form.querySelector('input[name="name"]').value,
-        email: form.querySelector('input[name="email"]').value,
-        password: form.querySelector('input[name="password"]').value,
-        phone: form.querySelector('input[name="phone"]').value,
-        cep: form.querySelector('input[name="cep"]').value,
-        street: form.querySelector('input[name="street"]').value,
-        neighborhood: form.querySelector('input[name="neighborhood"]').value,
-        city: form.querySelector('input[name="city"]').value,
-        state: form.querySelector('input[name="state"]').value
+        name,
+        email,
+        password,
+        phone,
+        address // Campo de endereço unificado
     };
     
-    // Salva os dados do cliente no localStorage
-    localStorage.setItem('clientData', JSON.stringify(clientData));
-    localStorage.setItem('userEmail', clientData.email);
+    // Salva os dados do cliente em um array 'users'
+    let users = JSON.parse(localStorage.getItem('users')) || [];
+    users.push(clientData);
+    localStorage.setItem('users', JSON.stringify(users));
+    
+    localStorage.setItem('userEmail', clientData.email); // Necessário para client-area.js
     
     // Redireciona para a área do cliente
     window.location.href = 'client-area.html';

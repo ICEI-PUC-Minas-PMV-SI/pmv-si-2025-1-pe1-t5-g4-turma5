@@ -34,8 +34,30 @@ function switchTab(tabId) {
     document.querySelector(`[onclick="switchTab('${tabId}')"]`).classList.add('active');
     document.getElementById(`${tabId}-freights`).classList.add('active');
     
-    // Carrega os fretes apropriados
-    loadFreights(tabId);
+    // Carrega os fretes apropriados ou informações do perfil
+    if (tabId === 'profile') {
+        loadDriverProfileInfo();
+    } else {
+        loadFreights(tabId);
+    }
+}
+
+// Função para carregar informações do perfil do motorista
+function loadDriverProfileInfo() {
+    const profileInfoContainer = document.querySelector('.profile-info-driver');
+    if (userData) {
+        profileInfoContainer.innerHTML = `
+            <h2>Informações Pessoais</h2>
+            <p><strong>Nome:</strong> ${userData.name}</p>
+            <p><strong>Email:</strong> ${userData.email}</p>
+            <p><strong>Telefone:</strong> ${userData.phone}</p>
+            <p><strong>Modelo do Veículo:</strong> ${userData.vehicleModel}</p>
+            <p><strong>Placa do Veículo:</strong> ${userData.vehiclePlate}</p>
+            <p><strong>Ano do Veículo:</strong> ${userData.vehicleYear}</p>
+        `;
+    } else {
+        profileInfoContainer.innerHTML = '<p>Não foi possível carregar as informações do perfil.</p>';
+    }
 }
 
 // Função para carregar fretes
